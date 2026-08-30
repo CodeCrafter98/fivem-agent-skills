@@ -1,6 +1,6 @@
 ---
 name: fivem-entity-lifecycle
-description: Manage FiveM entity lifecycle reliably across model loading, creation, networking, ownership, persistence, migration, deletion, resource stop, and player disconnect.
+description: 'Manage FiveM entity lifecycle reliably across model loading, creation, networking, ownership, persistence, migration, deletion, resource stop, and player disconnect.'
 ---
 # fivem-entity-lifecycle
 ## Purpose

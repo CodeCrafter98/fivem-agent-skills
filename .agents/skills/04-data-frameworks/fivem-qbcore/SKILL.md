@@ -1,6 +1,6 @@
 ---
 name: fivem-qbcore
-description: Implement QBCore integrations for players, jobs, money, items, metadata, callbacks, vehicles, permissions, notifications, and lifecycle using the installed server version.
+description: 'Implement QBCore integrations for players, jobs, money, items, metadata, callbacks, vehicles, permissions, notifications, and lifecycle using the installed server version.'
 ---
 # fivem-qbcore
 ## Purpose

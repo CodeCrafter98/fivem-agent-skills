@@ -1,6 +1,6 @@
 ---
 name: fivem-cfxlua
-description: Write and review modern CfxLua for FiveM using Lua 5.4 semantics, Cfx extensions, coroutine/thread patterns, efficient tables, vectors, errors, and hot-path discipline.
+description: 'Write and review modern CfxLua for FiveM using Lua 5.4 semantics, Cfx extensions, coroutine/thread patterns, efficient tables, vectors, errors, and hot-path discipline.'
 ---
 # fivem-cfxlua
 ## Purpose

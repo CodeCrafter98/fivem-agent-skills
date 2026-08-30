@@ -1,6 +1,6 @@
 ---
 name: fivem-documentation
-description: Write operator and developer documentation for FiveM resources: installation, dependencies, configuration, permissions, events/exports, database, UI build, troubleshooting, security, and upgrade guidance.
+description: 'Write operator and developer documentation for FiveM resources: installation, dependencies, configuration, permissions, events/exports, database, UI build, troubleshooting, security, and upgrade guidance.'
 ---
 # fivem-documentation
 ## Purpose

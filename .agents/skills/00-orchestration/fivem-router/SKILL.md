@@ -1,6 +1,6 @@
 ---
 name: fivem-router
-description: Route FiveM development tasks to the minimum relevant specialist skills. Use for any FiveM resource work, feature, bug, audit, UI, networking, framework, database, gameplay, security, or performance task.
+description: 'Route FiveM development tasks to the minimum relevant specialist skills. Use for any FiveM resource work, feature, bug, audit, UI, networking, framework, database, gameplay, security, or performance task.'
 ---
 # fivem-router
 ## Purpose

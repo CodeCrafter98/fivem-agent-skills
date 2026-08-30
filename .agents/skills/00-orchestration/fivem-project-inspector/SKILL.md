@@ -1,6 +1,6 @@
 ---
 name: fivem-project-inspector
-description: Inspect an existing FiveM project before modification. Use to identify framework, dependencies, resource boundaries, events, exports, database access, NUI stack, conventions, and risk areas.
+description: 'Inspect an existing FiveM project before modification. Use to identify framework, dependencies, resource boundaries, events, exports, database access, NUI stack, conventions, and risk areas.'
 ---
 # fivem-project-inspector
 ## Purpose

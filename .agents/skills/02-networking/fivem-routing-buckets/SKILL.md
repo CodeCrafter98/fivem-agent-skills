@@ -1,6 +1,6 @@
 ---
 name: fivem-routing-buckets
-description: Design and review routing bucket usage, population settings, entity lockdown modes, player/entity assignment, and instance teardown in OneSync.
+description: 'Design and review routing bucket usage, population settings, entity lockdown modes, player/entity assignment, and instance teardown in OneSync.'
 ---
 # fivem-routing-buckets
 ## Purpose

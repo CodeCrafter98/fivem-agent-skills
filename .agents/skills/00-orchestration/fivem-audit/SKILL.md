@@ -1,6 +1,6 @@
 ---
 name: fivem-audit
-description: Perform a comprehensive FiveM resource audit across architecture, security, networking, performance, persistence, UI, framework compatibility, lifecycle, testing, and release readiness.
+description: 'Perform a comprehensive FiveM resource audit across architecture, security, networking, performance, persistence, UI, framework compatibility, lifecycle, testing, and release readiness.'
 ---
 # fivem-audit
 ## Purpose

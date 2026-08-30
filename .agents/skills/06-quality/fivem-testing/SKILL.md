@@ -1,6 +1,6 @@
 ---
 name: fivem-testing
-description: Test FiveM resources with static checks, pure-Lua unit tests, frontend tests, integration tests, in-game multi-client scenarios, restart/disconnect cases, and regression matrices.
+description: 'Test FiveM resources with static checks, pure-Lua unit tests, frontend tests, integration tests, in-game multi-client scenarios, restart/disconnect cases, and regression matrices.'
 ---
 # fivem-testing
 ## Purpose

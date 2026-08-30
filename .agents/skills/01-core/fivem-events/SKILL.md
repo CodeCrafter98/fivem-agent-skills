@@ -1,6 +1,6 @@
 ---
 name: fivem-events
-description: Design and review FiveM local/network event contracts, handlers, callbacks, exports, cancellation, payload validation, naming, rate limits, and versioning.
+description: 'Design and review FiveM local/network event contracts, handlers, callbacks, exports, cancellation, payload validation, naming, rate limits, and versioning.'
 ---
 # fivem-events
 ## Purpose

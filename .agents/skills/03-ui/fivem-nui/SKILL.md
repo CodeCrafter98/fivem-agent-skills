@@ -1,6 +1,6 @@
 ---
 name: fivem-nui
-description: Build and review FiveM fullscreen NUI using CEF, `ui_page`, resource files, focus, messages, callbacks, development tooling, responsive layout, and safe teardown.
+description: 'Build and review FiveM fullscreen NUI using CEF, `ui_page`, resource files, focus, messages, callbacks, development tooling, responsive layout, and safe teardown.'
 ---
 # fivem-nui
 ## Purpose

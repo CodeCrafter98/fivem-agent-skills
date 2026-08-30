@@ -1,6 +1,6 @@
 ---
 name: fivem-frontend-stack
-description: Engineer modern FiveM NUI frontends with TypeScript and an appropriate framework/build tool while controlling bundle size, render frequency, state, accessibility, and CEF compatibility.
+description: 'Engineer modern FiveM NUI frontends with TypeScript and an appropriate framework/build tool while controlling bundle size, render frequency, state, accessibility, and CEF compatibility.'
 ---
 # fivem-frontend-stack
 ## Purpose

@@ -1,6 +1,6 @@
 ---
 name: fivem-onesync
-description: Design OneSync-aware FiveM networking: server-created entities, network IDs, ownership migration, culling, routing buckets, population, synchronization, and large-player behavior.
+description: 'Design OneSync-aware FiveM networking: server-created entities, network IDs, ownership migration, culling, routing buckets, population, synchronization, and large-player behavior.'
 ---
 # fivem-onesync
 ## Purpose

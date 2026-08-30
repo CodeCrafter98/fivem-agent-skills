@@ -1,6 +1,6 @@
 ---
 name: fivem-statebags
-description: Use FiveM state bags efficiently and safely for replicated entity/player/global attributes, including ownership, replication direction, change handlers, namespacing, and serialization cost.
+description: 'Use FiveM state bags efficiently and safely for replicated entity/player/global attributes, including ownership, replication direction, change handlers, namespacing, and serialization cost.'
 ---
 # fivem-statebags
 ## Purpose

@@ -1,6 +1,6 @@
 ---
 name: fivem-framework-adapter
-description: Keep FiveM resources portable across standalone, Qbox, QBCore, ESX, or custom frameworks using narrow adapter interfaces and capability detection.
+description: 'Keep FiveM resources portable across standalone, Qbox, QBCore, ESX, or custom frameworks using narrow adapter interfaces and capability detection.'
 ---
 # fivem-framework-adapter
 ## Purpose

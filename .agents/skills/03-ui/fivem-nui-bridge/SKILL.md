@@ -1,6 +1,6 @@
 ---
 name: fivem-nui-bridge
-description: Design typed, validated communication contracts between FiveM Lua and NUI frontends, including request/response envelopes, errors, timeouts, message routing, and rate limits.
+description: 'Design typed, validated communication contracts between FiveM Lua and NUI frontends, including request/response envelopes, errors, timeouts, message routing, and rate limits.'
 ---
 # fivem-nui-bridge
 ## Purpose

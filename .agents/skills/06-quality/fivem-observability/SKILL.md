@@ -1,6 +1,6 @@
 ---
 name: fivem-observability
-description: Add practical FiveM observability: structured logs, debug modes, metrics/counters, event tracing, correlation IDs, diagnostics commands, and privacy-conscious telemetry.
+description: 'Add practical FiveM observability: structured logs, debug modes, metrics/counters, event tracing, correlation IDs, diagnostics commands, and privacy-conscious telemetry.'
 ---
 # fivem-observability
 ## Purpose

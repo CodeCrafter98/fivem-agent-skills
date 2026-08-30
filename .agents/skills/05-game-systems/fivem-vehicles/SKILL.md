@@ -1,6 +1,6 @@
 ---
 name: fivem-vehicles
-description: Implement robust FiveM vehicle systems: creation, persistence, seats, doors, engine, damage, mods, extras, liveries, trailers, towing, ownership, synchronization, and cleanup.
+description: 'Implement robust FiveM vehicle systems: creation, persistence, seats, doors, engine, damage, mods, extras, liveries, trailers, towing, ownership, synchronization, and cleanup.'
 ---
 # fivem-vehicles
 ## Purpose

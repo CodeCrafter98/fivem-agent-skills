@@ -1,6 +1,6 @@
 ---
 name: fivem-release
-description: Prepare FiveM resources for release: versioning, changelog, migrations, dependency checks, build artifacts, packaging, upgrade notes, rollback, and release verification.
+description: 'Prepare FiveM resources for release: versioning, changelog, migrations, dependency checks, build artifacts, packaging, upgrade notes, rollback, and release verification.'
 ---
 # fivem-release
 ## Purpose

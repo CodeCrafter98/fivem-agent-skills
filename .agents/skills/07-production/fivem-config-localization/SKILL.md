@@ -1,6 +1,6 @@
 ---
 name: fivem-config-localization
-description: Design FiveM configuration and localization for safe defaults, environment-specific values, feature flags, locale files, validation, and backwards-compatible upgrades.
+description: 'Design FiveM configuration and localization for safe defaults, environment-specific values, feature flags, locale files, validation, and backwards-compatible upgrades.'
 ---
 # fivem-config-localization
 ## Purpose

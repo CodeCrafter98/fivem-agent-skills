@@ -1,6 +1,6 @@
 ---
 name: fivem-server-authority
-description: Design secure server-authoritative FiveM logic for permissions, economy, inventory, ownership, proximity, cooldowns, state mutation, spawning, and validation.
+description: 'Design secure server-authoritative FiveM logic for permissions, economy, inventory, ownership, proximity, cooldowns, state mutation, spawning, and validation.'
 ---
 # fivem-server-authority
 ## Purpose

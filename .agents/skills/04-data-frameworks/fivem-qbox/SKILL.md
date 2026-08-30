@@ -1,6 +1,6 @@
 ---
 name: fivem-qbox
-description: Implement FiveM integrations for current Qbox/QBX conventions, players, jobs, groups, money, callbacks, metadata, vehicles, inventory bridges, and framework lifecycle.
+description: 'Implement FiveM integrations for current Qbox/QBX conventions, players, jobs, groups, money, callbacks, metadata, vehicles, inventory bridges, and framework lifecycle.'
 ---
 # fivem-qbox
 ## Purpose

@@ -1,6 +1,6 @@
 ---
 name: fivem-dui
-description: Implement and review Direct-rendered UI (DUI) for in-world screens, terminals, vehicle displays, signs, TVs, and runtime textures.
+description: 'Implement and review Direct-rendered UI (DUI) for in-world screens, terminals, vehicle displays, signs, TVs, and runtime textures.'
 ---
 # fivem-dui
 ## Purpose

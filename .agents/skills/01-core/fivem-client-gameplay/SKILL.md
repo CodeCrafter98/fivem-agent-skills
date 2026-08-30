@@ -1,6 +1,6 @@
 ---
 name: fivem-client-gameplay
-description: Implement FiveM client gameplay systems: player/ped/vehicle interaction, cameras, animations, props, blips, markers, particles, audio, controls, and local presentation logic.
+description: 'Implement FiveM client gameplay systems: player/ped/vehicle interaction, cameras, animations, props, blips, markers, particles, audio, controls, and local presentation logic.'
 ---
 # fivem-client-gameplay
 ## Purpose

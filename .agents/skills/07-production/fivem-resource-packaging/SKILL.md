@@ -1,6 +1,6 @@
 ---
 name: fivem-resource-packaging
-description: Package distributable FiveM resources with clean manifests, production UI assets, licenses, source/build separation, optional escrow-aware boundaries, and no secrets or local artifacts.
+description: 'Package distributable FiveM resources with clean manifests, production UI assets, licenses, source/build separation, optional escrow-aware boundaries, and no secrets or local artifacts.'
 ---
 # fivem-resource-packaging
 ## Purpose

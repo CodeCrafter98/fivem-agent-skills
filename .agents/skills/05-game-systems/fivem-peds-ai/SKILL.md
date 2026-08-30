@@ -1,6 +1,6 @@
 ---
 name: fivem-peds-ai
-description: Build FiveM ped AI with task sequences, follow/escort/guard/combat/flee/scenario behavior, relationships, animations, perception, networking, and cleanup.
+description: 'Build FiveM ped AI with task sequences, follow/escort/guard/combat/flee/scenario behavior, relationships, animations, perception, networking, and cleanup.'
 ---
 # fivem-peds-ai
 ## Purpose

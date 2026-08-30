@@ -1,6 +1,6 @@
 ---
 name: fivem-resource-architecture
-description: Design and review FiveM resource architecture, fxmanifest metadata, module boundaries, exports, dependencies, lifecycle, configuration, and multi-resource composition.
+description: 'Design and review FiveM resource architecture, fxmanifest metadata, module boundaries, exports, dependencies, lifecycle, configuration, and multi-resource composition.'
 ---
 # fivem-resource-architecture
 ## Purpose

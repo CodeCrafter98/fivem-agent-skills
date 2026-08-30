@@ -1,6 +1,6 @@
 ---
 name: fivem-zones-raycasts
-description: Implement spatial queries, zones, raycasts, shape tests, line-of-sight, proximity, and world targeting efficiently in FiveM.
+description: 'Implement spatial queries, zones, raycasts, shape tests, line-of-sight, proximity, and world targeting efficiently in FiveM.'
 ---
 # fivem-zones-raycasts
 ## Purpose

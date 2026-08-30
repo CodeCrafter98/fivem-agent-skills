@@ -1,6 +1,6 @@
 ---
 name: fivem-compatibility
-description: Assess FiveM compatibility across server artifacts/game builds, GTA5 legacy/enhanced considerations, OneSync modes, frameworks, dependencies, and resource versions.
+description: 'Assess FiveM compatibility across server artifacts/game builds, GTA5 legacy/enhanced considerations, OneSync modes, frameworks, dependencies, and resource versions.'
 ---
 # fivem-compatibility
 ## Purpose

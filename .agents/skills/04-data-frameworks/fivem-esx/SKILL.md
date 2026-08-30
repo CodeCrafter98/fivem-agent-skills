@@ -1,6 +1,6 @@
 ---
 name: fivem-esx
-description: Implement ESX integrations for xPlayer, jobs, accounts, inventory, callbacks, vehicles, permissions, notifications, and lifecycle using the installed ESX version.
+description: 'Implement ESX integrations for xPlayer, jobs, accounts, inventory, callbacks, vehicles, permissions, notifications, and lifecycle using the installed ESX version.'
 ---
 # fivem-esx
 ## Purpose

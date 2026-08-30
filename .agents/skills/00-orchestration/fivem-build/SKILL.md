@@ -1,6 +1,6 @@
 ---
 name: fivem-build
-description: Execute a production-minded BUILD workflow for a new FiveM feature or resource. Use when implementing new functionality end-to-end.
+description: 'Execute a production-minded BUILD workflow for a new FiveM feature or resource. Use when implementing new functionality end-to-end.'
 ---
 # fivem-build
 ## Purpose

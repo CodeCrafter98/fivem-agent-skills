@@ -1,6 +1,6 @@
 ---
 name: fivem-security
-description: Audit and harden FiveM resources against malicious clients, forged events/callbacks, economy abuse, permission bypass, entity spoofing, replay/race attacks, SQL injection, and exposed secrets.
+description: 'Audit and harden FiveM resources against malicious clients, forged events/callbacks, economy abuse, permission bypass, entity spoofing, replay/race attacks, SQL injection, and exposed secrets.'
 ---
 # fivem-security
 ## Purpose

@@ -1,6 +1,6 @@
 ---
 name: fivem-native-expert
-description: Select, verify, and use FiveM/GTA natives correctly, including client/server context, hashes, parameters, return values, entity validity, network implications, and safer alternatives.
+description: 'Select, verify, and use FiveM/GTA natives correctly, including client/server context, hashes, parameters, return values, entity validity, network implications, and safer alternatives.'
 ---
 # fivem-native-expert
 ## Purpose

@@ -1,6 +1,6 @@
 ---
 name: fivem-performance
-description: Profile and optimize FiveM client/server/NUI performance: resmon, profiler, hot loops, native calls, allocations, events, state bags, entities, database queries, and frontend renders.
+description: 'Profile and optimize FiveM client/server/NUI performance: resmon, profiler, hot loops, native calls, allocations, events, state bags, entities, database queries, and frontend renders.'
 ---
 # fivem-performance
 ## Purpose

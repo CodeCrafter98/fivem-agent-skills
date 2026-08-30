@@ -1,6 +1,6 @@
 ---
 name: fivem-interactions
-description: Design FiveM interaction systems using targets, zones, context actions, 3D prompts, entities, and keybinds with adapters for ox_target, qb-target, or custom implementations.
+description: 'Design FiveM interaction systems using targets, zones, context actions, 3D prompts, entities, and keybinds with adapters for ox_target, qb-target, or custom implementations.'
 ---
 # fivem-interactions
 ## Purpose

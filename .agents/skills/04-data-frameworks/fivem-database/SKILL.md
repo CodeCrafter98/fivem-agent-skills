@@ -1,6 +1,6 @@
 ---
 name: fivem-database
-description: Design FiveM persistence with oxmysql or project-specific database libraries: queries, prepared parameters, repositories, transactions, indexes, migrations, caching, and failure handling.
+description: 'Design FiveM persistence with oxmysql or project-specific database libraries: queries, prepared parameters, repositories, transactions, indexes, migrations, caching, and failure handling.'
 ---
 # fivem-database
 ## Purpose

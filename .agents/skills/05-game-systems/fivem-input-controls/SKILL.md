@@ -1,6 +1,6 @@
 ---
 name: fivem-input-controls
-description: Design FiveM keyboard/controller input, command/key mapping, control disabling, focus interactions, hold/tap behavior, and conflict-safe cleanup.
+description: 'Design FiveM keyboard/controller input, command/key mapping, control disabling, focus interactions, hold/tap behavior, and conflict-safe cleanup.'
 ---
 # fivem-input-controls
 ## Purpose

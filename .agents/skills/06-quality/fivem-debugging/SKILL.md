@@ -1,6 +1,6 @@
 ---
 name: fivem-debugging
-description: Systematically diagnose FiveM client/server/Lua/NUI/network/database/framework/resource errors and desynchronization.
+description: 'Systematically diagnose FiveM client/server/Lua/NUI/network/database/framework/resource errors and desynchronization.'
 ---
 # fivem-debugging
 ## Purpose

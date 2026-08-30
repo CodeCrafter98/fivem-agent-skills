@@ -1,6 +1,6 @@
 ---
 name: fivem-code-review
-description: Review FiveM code changes for correctness, architecture, security, networking, lifecycle, performance, persistence, UI, compatibility, and maintainability with evidence-based severity.
+description: 'Review FiveM code changes for correctness, architecture, security, networking, lifecycle, performance, persistence, UI, compatibility, and maintainability with evidence-based severity.'
 ---
 # fivem-code-review
 ## Purpose

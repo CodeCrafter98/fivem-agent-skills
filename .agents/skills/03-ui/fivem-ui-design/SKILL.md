@@ -1,6 +1,6 @@
 ---
 name: fivem-ui-design
-description: Design premium, game-first FiveM UI/UX for HUDs, menus, MDTs, phones, inventories, garages, dispatch, vehicle controls, admin tools, and custom interfaces.
+description: 'Design premium, game-first FiveM UI/UX for HUDs, menus, MDTs, phones, inventories, garages, dispatch, vehicle controls, admin tools, and custom interfaces.'
 ---
 # fivem-ui-design
 ## Purpose

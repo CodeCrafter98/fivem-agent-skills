@@ -1,6 +1,6 @@
 ---
 name: fivem-ox-ecosystem
-description: Integrate ox_lib, ox_target, ox_inventory, and oxmysql deliberately in FiveM resources, using current APIs and avoiding unnecessary lock-in.
+description: 'Integrate ox_lib, ox_target, ox_inventory, and oxmysql deliberately in FiveM resources, using current APIs and avoiding unnecessary lock-in.'
 ---
 # fivem-ox-ecosystem
 ## Purpose

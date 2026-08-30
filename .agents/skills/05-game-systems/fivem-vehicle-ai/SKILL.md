@@ -1,6 +1,6 @@
 ---
 name: fivem-vehicle-ai
-description: Build FiveM vehicle AI for following, escort, convoy, pathfinding, driving styles, speed/gap control, recovery, obstruction handling, and player/AI handover.
+description: 'Build FiveM vehicle AI for following, escort, convoy, pathfinding, driving styles, speed/gap control, recovery, obstruction handling, and player/AI handover.'
 ---
 # fivem-vehicle-ai
 ## Purpose

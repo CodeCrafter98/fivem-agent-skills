@@ -1,6 +1,6 @@
 ---
 name: fivem-fix
-description: Run a root-cause-first FIX workflow for FiveM bugs. Use for errors, regressions, desync, NUI failures, event failures, entity issues, database problems, or performance regressions.
+description: 'Run a root-cause-first FIX workflow for FiveM bugs. Use for errors, regressions, desync, NUI failures, event failures, entity issues, database problems, or performance regressions.'
 ---
 # fivem-fix
 ## Purpose
