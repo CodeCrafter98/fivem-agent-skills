@@ -44,7 +44,7 @@ jobs:
           DEST=$(mktemp -d)
           python scripts/install.py --scope project --dest "$DEST"
           python scripts/install.py --scope project --dest "$DEST" 2>&1 | tee output.txt
-          SKIPPED=$(grep -c "SKIP existing" output.txt || true)
+          SKIPPED=$(grep -c "SKIP  fivem-" output.txt || true)
           echo "Skipped $SKIPPED skills on reinstall"
           [ "$SKIPPED" -ge 43 ] || { echo "FAIL: expected 43 skips, got $SKIPPED"; exit 1; }
 
@@ -98,39 +98,32 @@ jobs:
 
   skills-discovery:
     runs-on: ubuntu-latest
-    # This test requires the current branch to be pushed, so it only
-    # runs as a verification step and is allowed to fail on PRs from forks.
+    # The skills CLI test might fail due to network/npm registry issues. 
+    # We allow it to fail so package validation remains deterministic, 
+    # but still provide an explicit Vercel skills CLI smoke-test path.
     continue-on-error: true
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Check skills.sh discovery
+      - name: Check skills.sh discovery (Vercel CLI)
         run: |
-          # Use local directory scan to verify structure is compatible
-          SKILL_COUNT=$(find .agents/skills -name SKILL.md | wc -l)
-          echo "Found $SKILL_COUNT SKILL.md files"
-          [ "$SKILL_COUNT" -eq 43 ] || { echo "FAIL: expected 43"; exit 1; }
-          # Verify all frontmatter is parseable
-          python3 -c "
-          from pathlib import Path
-          import re, yaml, sys
-          try:
-              import yaml
-          except ImportError:
-              print('SKIP: PyYAML not available for strict parse test')
-              sys.exit(0)
-          ok = 0
-          for p in sorted(Path('.agents/skills').rglob('SKILL.md')):
-              text = p.read_text()
-              m = re.match(r'^---\n(.*?)\n---', text, re.S)
-              if m:
-                  try:
-                      yaml.safe_load(m.group(1))
-                      ok += 1
-                  except Exception as e:
-                      print(f'FAIL: {p}: {e}')
-                      sys.exit(1)
-          print(f'OK: {ok} skills have valid YAML frontmatter')
-          " || true
+          # Use the real Vercel skills CLI to verify it can discover the local checkout
+          # We extract all matching "fivem-*" skill names from the output.
+          echo "Running 'npx -y skills@latest add . --list'..."
+          CLI_OUTPUT=$(npx -y skills@latest add . --list)
+          
+          # Count unique 'fivem-*' skills, ignoring the 'fivem-agent-skills' package name itself
+          CLI_COUNT=$(echo "$CLI_OUTPUT" | grep -o "fivem-[a-zA-Z0-9-]*" | grep -v "fivem-agent-skills" | sort | uniq | wc -l)
+          
+          echo "CLI discovered $CLI_COUNT skills."
+          if [ "$CLI_COUNT" -eq 43 ]; then
+            echo "OK: skills CLI successfully discovered 43 skills."
+            exit 0
+          else
+            echo "FAIL: expected 43, got $CLI_COUNT"
+            echo "Raw output:"
+            echo "$CLI_OUTPUT"
+            exit 1
+          fi
