@@ -1,0 +1,31 @@
+name: Skill Request
+description: Request a new FiveM Agent Skill
+title: "[Request]: "
+labels: ["enhancement", "new-skill"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a new skill! A good skill solves a specific FiveM engineering problem.
+  - type: input
+    id: name
+    attributes:
+      label: Proposed Skill Name
+      description: The name should start with `fivem-`.
+      placeholder: "e.g. fivem-inventory-system"
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: Purpose & Use Cases
+      description: What problem does this skill solve? When should the agent use it?
+    validations:
+      required: true
+  - type: textarea
+    id: rules
+    attributes:
+      label: Engineering Rules
+      description: What specific engineering rules, constraints, or best practices should this skill enforce?
+    validations:
+      required: true

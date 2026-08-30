@@ -8,7 +8,9 @@
 
 A modular, reusable Agent Skills toolkit that gives modern AI coding agents deep FiveM-specific engineering knowledge — from resource architecture and Lua development to networking, custom UIs, framework integration, security auditing, performance optimization, testing, and production releases.
 
-**Designed for Codex · Cursor · Google Antigravity · Agent Skills compatible tooling**
+**Designed for Codex · Cursor · Google Antigravity · Claude · Agent Skills compatible tooling**
+
+[![skills.sh compatible](https://img.shields.io/badge/skills.sh-compatible-blue?logo=vercel&logoColor=white)](https://skills.sh)
 
 </div>
 
@@ -456,7 +458,31 @@ LOW
 
 # Installation
 
-## Recommended: project-local installation
+## Quick Start (Recommended)
+
+This package is fully compatible with [skills.sh](https://skills.sh), the universal Agent Skills package manager.
+
+To install into your project interactively:
+
+```bash
+npx skills add CodeCrafter98/fivem-agent-skills
+```
+
+To install specific skills (e.g. for a UI task):
+
+```bash
+npx skills add CodeCrafter98/fivem-agent-skills -s fivem-nui fivem-nui-bridge fivem-ui-design
+```
+
+To install globally for a specific agent:
+
+```bash
+npx skills add CodeCrafter98/fivem-agent-skills --global --agent antigravity
+```
+
+---
+
+## Manual / Offline Installation
 
 Project-local installation is recommended because the skills become part of the repository and travel with the codebase.
 
