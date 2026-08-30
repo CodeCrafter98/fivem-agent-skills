@@ -1,6 +1,6 @@
 ---
 name: fivem-resource-architecture
-description: Design and review FiveM resource architecture, fxmanifest metadata, module boundaries, exports, dependencies, lifecycle, configuration, and multi-resource composition.
+description: 'Design and review FiveM resource architecture, fxmanifest metadata, module boundaries, exports, dependencies, lifecycle, configuration, and multi-resource composition.'
 ---
 # fivem-resource-architecture
 ## Purpose
@@ -16,20 +16,11 @@ Create cohesive resources with explicit public contracts and minimal coupling.
 7. Avoid circular dependencies; introduce a small interface/adapter boundary instead.
 8. Version public contracts when external resources consume them.
 
-## Non-negotiable engineering rules
+## Standalone safety
 
-- Treat every client and NUI payload as untrusted input. Security-sensitive state is server authoritative.
-- Target current CfxLua / Lua 5.4. Do not add `lua54 'yes'`; it is deprecated and unnecessary.
-- Prefer `fxmanifest.lua` with `fx_version 'cerulean'` for modern resources unless compatibility evidence requires otherwise.
-- Never invent natives, exports, events, framework APIs, SQL columns, or configuration keys. Verify uncertain APIs against project code or authoritative documentation.
-- Keep client, server, shared, UI, persistence, and framework-adapter responsibilities explicit.
-- Minimize polling and frame loops. `Wait(0)` is reserved for work that genuinely must execute every rendered frame.
-- Across network boundaries, use network-safe identifiers and validate existence/ownership/state before mutation.
-- Design every entity workflow for create → network/own → use → migration → cleanup/delete, including resource stop and player disconnect.
-- NUI callbacks must always return a response; use JSON-encodable contracts and explicit error shapes.
-- Prefer small, typed/validated event payloads over large replicated blobs or implicit shared state.
-- Do not refactor unrelated code during a focused fix. Preserve existing architecture unless a change is necessary and justified.
-- Completion means verification: syntax/static checks, relevant tests, runtime/restart cases, security review, and performance checks proportional to the change.
+- Treat client/NUI input as untrusted. Security-sensitive state is server-authoritative.
+- Never invent natives, framework APIs, events, exports, or schema. Verify against project code or official docs.
+- Completion requires verification proportional to risk.
 
 ## Skill-specific guardrails
 - Do not use `lua54 'yes'`.
@@ -47,4 +38,4 @@ When this skill materially affects a task, leave a concise implementation/review
 
 ## Reference policy
 
-Use project source and authoritative documentation before relying on memory for version-sensitive APIs. Start with `references/official-sources.md` in this package. When documentation and installed project code disagree, target the installed version and document the compatibility constraint.
+Prefer project source and authoritative documentation over memory for version-sensitive APIs. See `references/cfxlua-sources.md` in this skill for resource manifest documentation. When documentation and installed project code disagree, target the installed version.

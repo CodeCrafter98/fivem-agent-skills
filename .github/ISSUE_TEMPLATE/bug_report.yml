@@ -1,0 +1,46 @@
+name: Bug Report
+description: Create a report to help us improve the Agent Skills
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: skill
+    attributes:
+      label: Affected Skill(s)
+      description: Which skill(s) caused the problem? e.g. `fivem-security`, `fivem-nui-bridge`
+      placeholder: "e.g. fivem-security"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is the bug? What did the agent do wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps To Reproduce
+      description: How can we reproduce the bad behavior? (Provide the prompt and context you gave the agent)
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should the agent have done instead?
+    validations:
+      required: true
+  - type: input
+    id: agent
+    attributes:
+      label: AI Agent / Tool
+      description: Which agent were you using? e.g. Cursor, Copilot, Antigravity, etc.
+      placeholder: "e.g. Cursor"
+    validations:
+      required: false

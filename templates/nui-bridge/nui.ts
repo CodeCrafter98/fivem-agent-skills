@@ -13,7 +13,29 @@ export async function nuiFetch<TReq, TRes>(event: string, payload: TReq, timeout
       body: JSON.stringify(payload),
       signal: controller.signal,
     });
-    return await response.json();
+
+    if (!response.ok) {
+      return { ok: false, error: { code: 'http_error', message: `HTTP ${response.status}` } };
+    }
+
+    let body: unknown;
+    try {
+      body = await response.json();
+    } catch {
+      return { ok: false, error: { code: 'invalid_response', message: 'Response is not valid JSON' } };
+    }
+
+    // Validate the response matches the expected NuiResult shape
+    if (typeof body === 'object' && body !== null && 'ok' in body) {
+      return body as NuiResult<TRes>;
+    }
+
+    return { ok: false, error: { code: 'invalid_response', message: 'Unexpected response shape' } };
+  } catch (err: unknown) {
+    if (err instanceof DOMException && err.name === 'AbortError') {
+      return { ok: false, error: { code: 'timeout', message: `Request timed out after ${timeoutMs}ms` } };
+    }
+    return { ok: false, error: { code: 'network_error', message: 'Network request failed' } };
   } finally {
     clearTimeout(timer);
   }

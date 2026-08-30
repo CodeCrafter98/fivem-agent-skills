@@ -2,6 +2,7 @@ name: validate-skills
 on:
   push:
   pull_request:
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -10,4 +11,119 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python scripts/validate_skills.py
+      - name: Run package validator
+        run: python scripts/validate_skills.py
+
+  installer-smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Clean project installation
+        run: |
+          DEST=$(mktemp -d)
+          python scripts/install.py --scope project --dest "$DEST"
+          INSTALLED=$(find "$DEST/.agents/skills" -name SKILL.md | wc -l)
+          echo "Installed $INSTALLED skills"
+          [ "$INSTALLED" -eq 43 ] || { echo "FAIL: expected 43, got $INSTALLED"; exit 1; }
+
+      - name: Unrelated skill survives
+        run: |
+          DEST=$(mktemp -d)
+          mkdir -p "$DEST/.agents/skills/unrelated-skill"
+          echo "---\nname: unrelated-skill\ndescription: test\n---\n# test" > "$DEST/.agents/skills/unrelated-skill/SKILL.md"
+          python scripts/install.py --scope project --dest "$DEST"
+          [ -f "$DEST/.agents/skills/unrelated-skill/SKILL.md" ] || { echo "FAIL: unrelated skill deleted"; exit 1; }
+          echo "OK: unrelated skill preserved"
+
+      - name: Reinstall without force skips
+        run: |
+          DEST=$(mktemp -d)
+          python scripts/install.py --scope project --dest "$DEST"
+          python scripts/install.py --scope project --dest "$DEST" 2>&1 | tee output.txt
+          SKIPPED=$(grep -c "SKIP  fivem-" output.txt || true)
+          echo "Skipped $SKIPPED skills on reinstall"
+          [ "$SKIPPED" -ge 43 ] || { echo "FAIL: expected 43 skips, got $SKIPPED"; exit 1; }
+
+      - name: Force replaces matching skills
+        run: |
+          DEST=$(mktemp -d)
+          mkdir -p "$DEST/.agents/skills/unrelated-skill"
+          echo "test" > "$DEST/.agents/skills/unrelated-skill/SKILL.md"
+          python scripts/install.py --scope project --dest "$DEST" --force
+          [ -f "$DEST/.agents/skills/unrelated-skill/SKILL.md" ] || { echo "FAIL: unrelated skill deleted by force"; exit 1; }
+          INSTALLED=$(find "$DEST/.agents/skills" -name SKILL.md | wc -l)
+          echo "Installed $INSTALLED skills (includes unrelated)"
+          [ "$INSTALLED" -eq 44 ] || { echo "FAIL: expected 44 (43+1), got $INSTALLED"; exit 1; }
+
+      - name: Portable references exist after install
+        run: |
+          DEST=$(mktemp -d)
+          python scripts/install.py --scope project --dest "$DEST"
+          # Check that skills with references have them
+          for skill in fivem-router fivem-security fivem-performance fivem-nui-bridge fivem-nui fivem-onesync fivem-cfxlua; do
+            REF_DIR="$DEST/.agents/skills/$skill/references"
+            if [ -d "$REF_DIR" ] && [ "$(ls -A "$REF_DIR")" ]; then
+              echo "OK: $skill has references"
+            else
+              echo "FAIL: $skill missing references directory or files"
+              exit 1
+            fi
+          done
+
+      - name: Root AGENTS.md not overwritten if present
+        run: |
+          DEST=$(mktemp -d)
+          echo "# Existing project instructions" > "$DEST/AGENTS.md"
+          python scripts/install.py --scope project --dest "$DEST"
+          head -1 "$DEST/AGENTS.md" | grep -q "Existing project" || { echo "FAIL: root AGENTS.md overwritten"; exit 1; }
+          echo "OK: existing AGENTS.md preserved"
+
+  installer-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: PowerShell install smoke test
+        shell: pwsh
+        run: |
+          $Dest = Join-Path $env:RUNNER_TEMP "fivem-test-project"
+          New-Item -Path $Dest -ItemType Directory -Force | Out-Null
+          & .\scripts\install.ps1 -Scope Project -Dest $Dest
+          $count = (Get-ChildItem -Path (Join-Path $Dest ".agents\skills") -Recurse -Filter "SKILL.md").Count
+          Write-Host "Installed $count skills"
+          if ($count -ne 43) { throw "Expected 43 skills, got $count" }
+
+  skills-discovery:
+    runs-on: ubuntu-latest
+    # The skills CLI test might fail due to network/npm registry issues. 
+    # We allow it to fail so package validation remains deterministic, 
+    # but still provide an explicit Vercel skills CLI smoke-test path.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Check skills.sh discovery (Vercel CLI)
+        run: |
+          # Use the real Vercel skills CLI to verify it can discover the local checkout
+          # We extract all matching "fivem-*" skill names from the output.
+          echo "Running 'npx -y skills@latest add . --list'..."
+          CLI_OUTPUT=$(npx -y skills@latest add . --list)
+          
+          # Count unique 'fivem-*' skills, ignoring the 'fivem-agent-skills' package name itself
+          CLI_COUNT=$(echo "$CLI_OUTPUT" | grep -o "fivem-[a-zA-Z0-9-]*" | grep -v "fivem-agent-skills" | sort | uniq | wc -l)
+          
+          echo "CLI discovered $CLI_COUNT skills."
+          if [ "$CLI_COUNT" -eq 43 ]; then
+            echo "OK: skills CLI successfully discovered 43 skills."
+            exit 0
+          else
+            echo "FAIL: expected 43, got $CLI_COUNT"
+            echo "Raw output:"
+            echo "$CLI_OUTPUT"
+            exit 1
+          fi

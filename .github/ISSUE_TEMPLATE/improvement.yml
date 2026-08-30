@@ -1,0 +1,31 @@
+name: Skill Improvement
+description: Suggest an improvement to an existing FiveM Agent Skill
+title: "[Improvement]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve an existing skill!
+  - type: input
+    id: skill
+    attributes:
+      label: Target Skill
+      description: Which skill needs improvement?
+      placeholder: "e.g. fivem-onesync"
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: Proposed Improvement
+      description: What should be added, changed, or removed in the skill's instructions?
+    validations:
+      required: true
+  - type: textarea
+    id: reasoning
+    attributes:
+      label: Reasoning / Evidence
+      description: Why is this change necessary? Link to official FiveM docs if applicable.
+    validations:
+      required: true
