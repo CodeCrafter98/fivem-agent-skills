@@ -1,0 +1,21 @@
+{
+  "name": "convoy-ai",
+  "prompt": "Create 12 AI escort cars that follow a lead vehicle smoothly.",
+  "expected_skills": [
+    "fivem-vehicle-ai",
+    "fivem-native-expert",
+    "fivem-onesync",
+    "fivem-entity-lifecycle",
+    "fivem-performance"
+  ],
+  "assertions": [
+    "GTA driving tasks preferred over per-frame physics",
+    "ownership migration handled",
+    "multi-vehicle performance considered"
+  ],
+  "forbidden_patterns": [
+    "invent undocumented APIs",
+    "trust privileged client data",
+    "claim verified without evidence"
+  ]
+}

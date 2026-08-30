@@ -1,0 +1,19 @@
+{
+  "name": "resource-restart",
+  "prompt": "Persistent network vehicles duplicate after restarting the resource.",
+  "expected_skills": [
+    "fivem-fix",
+    "fivem-entity-lifecycle",
+    "fivem-onesync",
+    "fivem-debugging"
+  ],
+  "assertions": [
+    "reconciliation/idempotent cleanup considered",
+    "stale handles/netids considered"
+  ],
+  "forbidden_patterns": [
+    "invent undocumented APIs",
+    "trust privileged client data",
+    "claim verified without evidence"
+  ]
+}

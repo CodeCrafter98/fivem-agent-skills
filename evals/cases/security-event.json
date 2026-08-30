@@ -1,0 +1,19 @@
+{
+  "name": "security-event",
+  "prompt": "Client sends job grade and reward amount in TriggerServerEvent; server pays it.",
+  "expected_skills": [
+    "fivem-server-authority",
+    "fivem-events",
+    "fivem-security"
+  ],
+  "assertions": [
+    "rejects client authority",
+    "server derives grade/reward",
+    "rate/replay checks"
+  ],
+  "forbidden_patterns": [
+    "invent undocumented APIs",
+    "trust privileged client data",
+    "claim verified without evidence"
+  ]
+}

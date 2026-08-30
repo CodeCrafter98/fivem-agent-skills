@@ -1,0 +1,17 @@
+{
+  "name": "statebag-telemetry",
+  "prompt": "Replicate a full nested vehicle telemetry table 30 times per second with state bags.",
+  "expected_skills": [
+    "fivem-statebags",
+    "fivem-performance"
+  ],
+  "assertions": [
+    "rejects high-frequency large nested state bag churn",
+    "recommends compact/delta or local transport"
+  ],
+  "forbidden_patterns": [
+    "invent undocumented APIs",
+    "trust privileged client data",
+    "claim verified without evidence"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "dui-screens",
+  "prompt": "Render a different web dashboard onto 80 in-world monitors.",
+  "expected_skills": [
+    "fivem-dui",
+    "fivem-performance",
+    "fivem-entity-lifecycle"
+  ],
+  "assertions": [
+    "capacity/browser instance strategy considered",
+    "distance/offscreen throttling",
+    "DUI cleanup"
+  ],
+  "forbidden_patterns": [
+    "invent undocumented APIs",
+    "trust privileged client data",
+    "claim verified without evidence"
+  ]
+}

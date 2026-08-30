@@ -1,0 +1,223 @@
+{
+  "name": "fivem-agent-skills",
+  "version": "1.0.0",
+  "generated": "2026-08-30",
+  "skill_count": 43,
+  "skills": [
+    {
+      "category": "00-orchestration",
+      "name": "fivem-router",
+      "description": "Route FiveM development tasks to the minimum relevant specialist skills. Use for any FiveM resource work, feature, bug, audit, UI, networking, framework, database, gameplay, security, or performance task."
+    },
+    {
+      "category": "00-orchestration",
+      "name": "fivem-project-inspector",
+      "description": "Inspect an existing FiveM project before modification. Use to identify framework, dependencies, resource boundaries, events, exports, database access, NUI stack, conventions, and risk areas."
+    },
+    {
+      "category": "00-orchestration",
+      "name": "fivem-build",
+      "description": "Execute a production-minded BUILD workflow for a new FiveM feature or resource. Use when implementing new functionality end-to-end."
+    },
+    {
+      "category": "00-orchestration",
+      "name": "fivem-fix",
+      "description": "Run a root-cause-first FIX workflow for FiveM bugs. Use for errors, regressions, desync, NUI failures, event failures, entity issues, database problems, or performance regressions."
+    },
+    {
+      "category": "00-orchestration",
+      "name": "fivem-audit",
+      "description": "Perform a comprehensive FiveM resource audit across architecture, security, networking, performance, persistence, UI, framework compatibility, lifecycle, testing, and release readiness."
+    },
+    {
+      "category": "01-core",
+      "name": "fivem-resource-architecture",
+      "description": "Design and review FiveM resource architecture, fxmanifest metadata, module boundaries, exports, dependencies, lifecycle, configuration, and multi-resource composition."
+    },
+    {
+      "category": "01-core",
+      "name": "fivem-cfxlua",
+      "description": "Write and review modern CfxLua for FiveM using Lua 5.4 semantics, Cfx extensions, coroutine/thread patterns, efficient tables, vectors, errors, and hot-path discipline."
+    },
+    {
+      "category": "01-core",
+      "name": "fivem-native-expert",
+      "description": "Select, verify, and use FiveM/GTA natives correctly, including client/server context, hashes, parameters, return values, entity validity, network implications, and safer alternatives."
+    },
+    {
+      "category": "01-core",
+      "name": "fivem-client-gameplay",
+      "description": "Implement FiveM client gameplay systems: player/ped/vehicle interaction, cameras, animations, props, blips, markers, particles, audio, controls, and local presentation logic."
+    },
+    {
+      "category": "01-core",
+      "name": "fivem-server-authority",
+      "description": "Design secure server-authoritative FiveM logic for permissions, economy, inventory, ownership, proximity, cooldowns, state mutation, spawning, and validation."
+    },
+    {
+      "category": "01-core",
+      "name": "fivem-events",
+      "description": "Design and review FiveM local/network event contracts, handlers, callbacks, exports, cancellation, payload validation, naming, rate limits, and versioning."
+    },
+    {
+      "category": "02-networking",
+      "name": "fivem-onesync",
+      "description": "Design OneSync-aware FiveM networking: server-created entities, network IDs, ownership migration, culling, routing buckets, population, synchronization, and large-player behavior."
+    },
+    {
+      "category": "02-networking",
+      "name": "fivem-statebags",
+      "description": "Use FiveM state bags efficiently and safely for replicated entity/player/global attributes, including ownership, replication direction, change handlers, namespacing, and serialization cost."
+    },
+    {
+      "category": "02-networking",
+      "name": "fivem-entity-lifecycle",
+      "description": "Manage FiveM entity lifecycle reliably across model loading, creation, networking, ownership, persistence, migration, deletion, resource stop, and player disconnect."
+    },
+    {
+      "category": "02-networking",
+      "name": "fivem-routing-buckets",
+      "description": "Design and review routing bucket usage, population settings, entity lockdown modes, player/entity assignment, and instance teardown in OneSync."
+    },
+    {
+      "category": "03-ui",
+      "name": "fivem-nui",
+      "description": "Build and review FiveM fullscreen NUI using CEF, `ui_page`, resource files, focus, messages, callbacks, development tooling, responsive layout, and safe teardown."
+    },
+    {
+      "category": "03-ui",
+      "name": "fivem-nui-bridge",
+      "description": "Design typed, validated communication contracts between FiveM Lua and NUI frontends, including request/response envelopes, errors, timeouts, message routing, and rate limits."
+    },
+    {
+      "category": "03-ui",
+      "name": "fivem-ui-design",
+      "description": "Design premium, game-first FiveM UI/UX for HUDs, menus, MDTs, phones, inventories, garages, dispatch, vehicle controls, admin tools, and custom interfaces."
+    },
+    {
+      "category": "03-ui",
+      "name": "fivem-dui",
+      "description": "Implement and review Direct-rendered UI (DUI) for in-world screens, terminals, vehicle displays, signs, TVs, and runtime textures."
+    },
+    {
+      "category": "03-ui",
+      "name": "fivem-frontend-stack",
+      "description": "Engineer modern FiveM NUI frontends with TypeScript and an appropriate framework/build tool while controlling bundle size, render frequency, state, accessibility, and CEF compatibility."
+    },
+    {
+      "category": "04-data-frameworks",
+      "name": "fivem-database",
+      "description": "Design FiveM persistence with oxmysql or project-specific database libraries: queries, prepared parameters, repositories, transactions, indexes, migrations, caching, and failure handling."
+    },
+    {
+      "category": "04-data-frameworks",
+      "name": "fivem-framework-adapter",
+      "description": "Keep FiveM resources portable across standalone, Qbox, QBCore, ESX, or custom frameworks using narrow adapter interfaces and capability detection."
+    },
+    {
+      "category": "04-data-frameworks",
+      "name": "fivem-ox-ecosystem",
+      "description": "Integrate ox_lib, ox_target, ox_inventory, and oxmysql deliberately in FiveM resources, using current APIs and avoiding unnecessary lock-in."
+    },
+    {
+      "category": "04-data-frameworks",
+      "name": "fivem-qbox",
+      "description": "Implement FiveM integrations for current Qbox/QBX conventions, players, jobs, groups, money, callbacks, metadata, vehicles, inventory bridges, and framework lifecycle."
+    },
+    {
+      "category": "04-data-frameworks",
+      "name": "fivem-qbcore",
+      "description": "Implement QBCore integrations for players, jobs, money, items, metadata, callbacks, vehicles, permissions, notifications, and lifecycle using the installed server version."
+    },
+    {
+      "category": "04-data-frameworks",
+      "name": "fivem-esx",
+      "description": "Implement ESX integrations for xPlayer, jobs, accounts, inventory, callbacks, vehicles, permissions, notifications, and lifecycle using the installed ESX version."
+    },
+    {
+      "category": "05-game-systems",
+      "name": "fivem-vehicles",
+      "description": "Implement robust FiveM vehicle systems: creation, persistence, seats, doors, engine, damage, mods, extras, liveries, trailers, towing, ownership, synchronization, and cleanup."
+    },
+    {
+      "category": "05-game-systems",
+      "name": "fivem-vehicle-ai",
+      "description": "Build FiveM vehicle AI for following, escort, convoy, pathfinding, driving styles, speed/gap control, recovery, obstruction handling, and player/AI handover."
+    },
+    {
+      "category": "05-game-systems",
+      "name": "fivem-peds-ai",
+      "description": "Build FiveM ped AI with task sequences, follow/escort/guard/combat/flee/scenario behavior, relationships, animations, perception, networking, and cleanup."
+    },
+    {
+      "category": "05-game-systems",
+      "name": "fivem-interactions",
+      "description": "Design FiveM interaction systems using targets, zones, context actions, 3D prompts, entities, and keybinds with adapters for ox_target, qb-target, or custom implementations."
+    },
+    {
+      "category": "05-game-systems",
+      "name": "fivem-zones-raycasts",
+      "description": "Implement spatial queries, zones, raycasts, shape tests, line-of-sight, proximity, and world targeting efficiently in FiveM."
+    },
+    {
+      "category": "05-game-systems",
+      "name": "fivem-input-controls",
+      "description": "Design FiveM keyboard/controller input, command/key mapping, control disabling, focus interactions, hold/tap behavior, and conflict-safe cleanup."
+    },
+    {
+      "category": "06-quality",
+      "name": "fivem-security",
+      "description": "Audit and harden FiveM resources against malicious clients, forged events/callbacks, economy abuse, permission bypass, entity spoofing, replay/race attacks, SQL injection, and exposed secrets."
+    },
+    {
+      "category": "06-quality",
+      "name": "fivem-performance",
+      "description": "Profile and optimize FiveM client/server/NUI performance: resmon, profiler, hot loops, native calls, allocations, events, state bags, entities, database queries, and frontend renders."
+    },
+    {
+      "category": "06-quality",
+      "name": "fivem-debugging",
+      "description": "Systematically diagnose FiveM client/server/Lua/NUI/network/database/framework/resource errors and desynchronization."
+    },
+    {
+      "category": "06-quality",
+      "name": "fivem-testing",
+      "description": "Test FiveM resources with static checks, pure-Lua unit tests, frontend tests, integration tests, in-game multi-client scenarios, restart/disconnect cases, and regression matrices."
+    },
+    {
+      "category": "06-quality",
+      "name": "fivem-code-review",
+      "description": "Review FiveM code changes for correctness, architecture, security, networking, lifecycle, performance, persistence, UI, compatibility, and maintainability with evidence-based severity."
+    },
+    {
+      "category": "06-quality",
+      "name": "fivem-observability",
+      "description": "Add practical FiveM observability: structured logs, debug modes, metrics/counters, event tracing, correlation IDs, diagnostics commands, and privacy-conscious telemetry."
+    },
+    {
+      "category": "07-production",
+      "name": "fivem-config-localization",
+      "description": "Design FiveM configuration and localization for safe defaults, environment-specific values, feature flags, locale files, validation, and backwards-compatible upgrades."
+    },
+    {
+      "category": "07-production",
+      "name": "fivem-compatibility",
+      "description": "Assess FiveM compatibility across server artifacts/game builds, GTA5 legacy/enhanced considerations, OneSync modes, frameworks, dependencies, and resource versions."
+    },
+    {
+      "category": "07-production",
+      "name": "fivem-release",
+      "description": "Prepare FiveM resources for release: versioning, changelog, migrations, dependency checks, build artifacts, packaging, upgrade notes, rollback, and release verification."
+    },
+    {
+      "category": "07-production",
+      "name": "fivem-documentation",
+      "description": "Write operator and developer documentation for FiveM resources: installation, dependencies, configuration, permissions, events/exports, database, UI build, troubleshooting, security, and upgrade guidance."
+    },
+    {
+      "category": "07-production",
+      "name": "fivem-resource-packaging",
+      "description": "Package distributable FiveM resources with clean manifests, production UI assets, licenses, source/build separation, optional escrow-aware boundaries, and no secrets or local artifacts."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "nui-timeout",
+  "prompt": "My React NUI fetch hangs forever after clicking Save.",
+  "expected_skills": [
+    "fivem-fix",
+    "fivem-debugging",
+    "fivem-nui",
+    "fivem-nui-bridge"
+  ],
+  "assertions": [
+    "callback returns on every code path",
+    "browser errors inspected",
+    "focus/cleanup checked if relevant"
+  ],
+  "forbidden_patterns": [
+    "invent undocumented APIs",
+    "trust privileged client data",
+    "claim verified without evidence"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "release",
+  "prompt": "Package this resource for public release with a React NUI and SQL migration.",
+  "expected_skills": [
+    "fivem-release",
+    "fivem-resource-packaging",
+    "fivem-documentation",
+    "fivem-database",
+    "fivem-compatibility"
+  ],
+  "assertions": [
+    "production UI build included",
+    "migration/backup notes",
+    "no secrets/node_modules"
+  ],
+  "forbidden_patterns": [
+    "invent undocumented APIs",
+    "trust privileged client data",
+    "claim verified without evidence"
+  ]
+}

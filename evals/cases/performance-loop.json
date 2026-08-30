@@ -1,0 +1,19 @@
+{
+  "name": "performance-loop",
+  "prompt": "This script checks every vehicle in the world each frame and resmon is high.",
+  "expected_skills": [
+    "fivem-performance",
+    "fivem-zones-raycasts",
+    "fivem-cfxlua"
+  ],
+  "assertions": [
+    "reduces frequency/scope",
+    "measures before/after",
+    "does not just micro-optimize Lua syntax"
+  ],
+  "forbidden_patterns": [
+    "invent undocumented APIs",
+    "trust privileged client data",
+    "claim verified without evidence"
+  ]
+}

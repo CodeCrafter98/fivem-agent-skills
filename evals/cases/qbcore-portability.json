@@ -1,0 +1,19 @@
+{
+  "name": "qbcore-portability",
+  "prompt": "Make this QBCore garage also work on Qbox and ESX.",
+  "expected_skills": [
+    "fivem-framework-adapter",
+    "fivem-qbcore",
+    "fivem-qbox",
+    "fivem-esx"
+  ],
+  "assertions": [
+    "core logic remains framework-neutral",
+    "adapters isolate differences"
+  ],
+  "forbidden_patterns": [
+    "invent undocumented APIs",
+    "trust privileged client data",
+    "claim verified without evidence"
+  ]
+}

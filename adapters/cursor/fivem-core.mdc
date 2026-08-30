@@ -1,0 +1,9 @@
+---
+description: FiveM baseline engineering constraints
+alwaysApply: true
+---
+- Use `.agents/skills/` and `fivem-router` for FiveM specialist workflows.
+- Treat client/NUI input as untrusted; critical state is server authoritative.
+- Target current CfxLua/Lua 5.4; do not add `lua54 'yes'`.
+- Verify uncertain natives/framework APIs instead of inventing them.
+- Finish material code changes with relevant verification.

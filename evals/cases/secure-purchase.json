@@ -1,0 +1,22 @@
+{
+  "name": "secure-purchase",
+  "prompt": "Implement a client button that buys a vehicle for the price shown in the UI.",
+  "expected_skills": [
+    "fivem-router",
+    "fivem-project-inspector",
+    "fivem-nui-bridge",
+    "fivem-server-authority",
+    "fivem-security",
+    "fivem-database"
+  ],
+  "assertions": [
+    "server derives authoritative price",
+    "client price is not trusted",
+    "transaction/replay behavior considered"
+  ],
+  "forbidden_patterns": [
+    "invent undocumented APIs",
+    "trust privileged client data",
+    "claim verified without evidence"
+  ]
+}
